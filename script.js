@@ -1,5 +1,4 @@
 // Funções básicas console.log('dsajdsa')
-
 console.log('oi mundo, eu sou uma pessoa normal')
 prompt('você tem autoestima?')
 
@@ -15,10 +14,13 @@ console.log(`Bom dia, ${nome}! Como vai você?`)
 
 /*
 Operadores relacionais
-== -> Igual (não confundir com =) 
-!= -> Diferente
->  -> maior
->= -> maior
+==  -> Igual (não confundir com =) 
+!=  -> Diferente
+>   -> maior
+>=  -> maior ou igual
+<   -> menor
+<=  -> menor ou igual
+=== -> igual (compara o tipo também)
 ...
 Operadores lógicos
 || -> OU
@@ -26,15 +28,15 @@ Operadores lógicos
 !  -> Não (negativo)
 */
 
+// ESTRUTURAS DE CONDIÇÃO - IF
 let nome1 = 'filipe'
 let idade = 19
 
 if (nome1 == 'filipe' && idade < 18) {
-    console.log('Você é maior de idade e se chama filipe', nome)
+    console.log('Você é menor de idade e se chama', nome)
 } else {
     console.log('Vai te catar', nome)
 }
-
 
 
 // Exemplo - IF
@@ -56,7 +58,7 @@ let listaFrutas = ['banana 0', 'maçã 1', 'pera 2', 'manga', 'morango' ] //...
 
 let novaFruta = prompt('Adicione uma fruta')
 
-let listaNovasFrutas = listaFrutas.filter(fruta => fruta == novaFruta)
+let listaNovaFruta = listaFrutas.find(fruta => fruta == novaFruta) // Encontra a fruta inserida na lista criada
 console.log(listaNovasFrutas)
 
 
@@ -77,7 +79,7 @@ let produto = {
     descricao: 'Iphone com 8 câmeras e 4785gb de memória'
 }
 let atributo = 'falar'
-console.log(pessoa[atributo]())
+console.log(pessoa[atributo]()) // Aqui eu preciso inserir os parênteses porque no caso o nosso atributo é uma função, e eu quero executá-la
 
 // Combinação objeto + lista
 let listaProdutos = [
